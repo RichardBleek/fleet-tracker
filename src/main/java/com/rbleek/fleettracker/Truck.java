@@ -8,6 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Truck {
 
+    public Truck() {
+    }
+
     public Truck(String licensePlate) {
         this.licensePlate = licensePlate;
     }
