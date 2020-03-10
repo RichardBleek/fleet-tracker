@@ -17,7 +17,7 @@ public class Router {
         return RouterFunctions
                 .route(GET("/trucks"),
                         serverRequest -> ServerResponse.ok().body(truckService.findAll(), Truck.class))
-                .andRoute(POST("/truck"), truckService::insert)
+                .andRoute(POST("/trucks"), truckService::insert)
                 .andRoute(GET("/trucks/locations"),
                         serverRequest -> ServerResponse.ok()
                                 .contentType(MediaType.TEXT_EVENT_STREAM)
